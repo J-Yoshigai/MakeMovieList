@@ -1,0 +1,31 @@
+<h2>Theater</h2>
+
+<%= link_to "Add a movie", "/admin/movies/new" %>
+<h2>Movie List</h2>
+<% @movies.each do |movie| %>
+<div>
+    <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</p>
+    <table>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>year</th>
+            <th>description</th>
+            <th>image_url</th>
+            <th>is_showing</th>
+        </tr>
+        <tr>
+            <th><%= movie.id %></th>
+            <th><%= movie.name %></th>
+            <th><%= movie.year %></th>
+            <th><%= movie.description %></th>
+            <th><%= movie.image_url %></th>
+            <th><%= movie.is_showing %></th>       
+        </tr>
+        <tr>
+            <th><%= link_to "DELETE", "/admin/movies/" + movie.id.to_s, method: :delete %>  </th>
+        </tr>
+    </table>
+
+</div>
+<% end %>
