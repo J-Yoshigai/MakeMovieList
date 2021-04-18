@@ -1,0 +1,9 @@
+<h2>Add a movie</h2>
+<%= form_with url: "/admin/movies/create", local: true do |f| %>
+    <p>       name : <%= f.text_field :name %></p>
+    <p>       year : <%= f.text_field :year %></p>
+    <p>description : <%= f.text_field :description %></p>
+    <p>  image_url : <%= f.text_field :image_url %></p>
+    <p> is_showing : <%= check_box_tag :is_showing %></p> 
+    <p><%= f.submit "CREATE" %></p>
+<% end %>
