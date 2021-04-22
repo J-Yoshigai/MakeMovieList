@@ -15,7 +15,15 @@
  */
 
 
-table{
-    border: 1px;
-    border-color: black;
-}
+ table {
+    border-collapse: collapse;
+  }
+  table th, table td {
+    border: solid 1px;
+    /*実線 1px 黒*/
+    width: 120px;
+  }
+
+  th .img{
+    width: 100px;
+  }

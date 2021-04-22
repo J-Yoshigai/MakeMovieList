@@ -9,7 +9,7 @@ class MoviesController < ApplicationController
 
     def create
         Movie.create(name: params[:name], year: params[:year], description: params[:description], image_url: params[:image_url], is_showing: params[:is_showing])
-        redirect_to "/admin/movies"
+        redirect_to "/movies"
         # redirect_to "/admin/movies/success"
     end
 
@@ -21,6 +21,6 @@ class MoviesController < ApplicationController
     def destroy
         @movie = Movie.find(params[:id])
         @movie.destroy
-        redirect_to "/admin/movies"
+        redirect_to "/movies"
     end
 end

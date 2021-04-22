@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_04_14_132724) do
     t.integer "year"
     t.text "description"
     t.string "image_url"
-    t.boolean "is_showing"
+    t.boolean "is_showing", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
