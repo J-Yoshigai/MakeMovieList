@@ -17,10 +17,14 @@ class MoviesController < ApplicationController
         # render plain: name
     end
 
-
     def destroy
         @movie = Movie.find(params[:id])
         @movie.destroy
         redirect_to "/movies"
     end
+    def destroy
+        @movie = Movie.find(params[:id])
+        @movie.update
+        redirect_to "/movies"
+    def
 end

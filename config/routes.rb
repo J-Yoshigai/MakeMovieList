@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   post "admin/movies/create" => "movies#create"
   get "admin/movies/success" => "movies#success"
   delete "admin/movies/:id" => "movies#destroy"
+  # patch "admin/movies/update/:id" => "movies#update"
 end
