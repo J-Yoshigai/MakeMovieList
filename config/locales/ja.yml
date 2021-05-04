@@ -1,0 +1,10 @@
+ja:
+  activerecord:
+    models:
+      movie: '映画'
+    attributes:
+      movie:
+        name: 'タイトル'
+        is_showing: 上映中
+
+
