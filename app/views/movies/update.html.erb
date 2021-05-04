@@ -1,0 +1,29 @@
+    <h2>Edit a movie information</h2>
+<%= form_with url: "/admin/movies", local: true do |f| %>
+    <p>タイトル : <%= f.text_field :name  %></p>
+    <p>公開年 : <%= f.text_field :year %></p>
+    <p>概要 : <%= f.text_area :description %></p>
+    <p>画像URL : <%= f.text_field :image_url %></p>
+    <p>上映中 : <%= check_box_tag :is_showing %></p> 
+    <p><%= f.submit "UPDATE" %></p>
+<% end %>
+
+
+    
+    <%
+=begin%>
+ <p>       name : <%= movie.name %></p>
+    <p>       year : <%= movie.year :year %></p>
+    <p>description : <%= movie.description :description %></p>
+    <p>  image_url : <%= movie.image_url :image_url %></p>
+    <p> is_showing : <%= movie.check_box_tag :is_showing %></p>  
+<%
+=end%>
+
+
+
+    <%
+=begin%>
+ <p><%= movie.save "" %></p> 
+<%
+=end%>

@@ -1,7 +1,16 @@
 <h2>Theater</h2>
-
 <%= link_to "Add a movie", "/admin/movies/new" %>
 <h2>Movie List</h2>
+
+<% if flash[:success] %>
+    <p><%= flash[:success] %></p>
+<% end %>
+
+<p>検索</p>
+<p><input type = "radio" name="show" > すべて </P>
+<p><input type = "radio" name="show" 上映中> 上映中 </P>
+<p><input type = "radio" name="show" 上映予定> 上映予定 </P>
+
 <% @movies.each do |movie| %>
     <table>
         <tr>
@@ -31,7 +40,7 @@
             <th><%= movie.updated_at %></th>
         </tr>
     </table>
+    <p><%= link_to "EDIT - id=" + movie.id.to_s, "/admin/movies/" + movie.id.to_s, method: :patch %>  </p>
     <p><%= link_to "DELETE - id=" + movie.id.to_s, "/admin/movies/" + movie.id.to_s, method: :delete %>  </p>
-
 
 <% end %>

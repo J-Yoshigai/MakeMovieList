@@ -1,0 +1,15 @@
+<h2>Movie List</h2>
+<% @movies.each do |movie| %>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>タイトル</th>
+            <th>画像URL</th>
+        </tr>
+        <tr>
+            <th><%= movie.id %></th>
+            <th><%= movie.name %></th>
+            <th><%= image_tag '1.jpg' %></th>
+        </tr>
+    </table>
+<% end %>

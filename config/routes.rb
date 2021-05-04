@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  get "movies" => "movies#index"
+  get "movies" => "movies#first"
+  get "admin/movies" => "movies#index"
   get "admin/movies/new" => "movies#new"
-  post "admin/movies/create" => "movies#create"
-  get "admin/movies/success" => "movies#success"
+  post "admin/movies" => "movies#create"
+  # get "admin/movies/success" => "movies#success"
   delete "admin/movies/:id" => "movies#destroy"
-  # patch "admin/movies/update/:id" => "movies#update"
+  patch "admin/movies/:id" => "movies#update"
 end
